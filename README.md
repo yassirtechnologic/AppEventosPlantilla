@@ -2,6 +2,18 @@
 
 🌍 Read this in [English](README-en.md)
 
+[English](README-en.md) · [Español](README.md)
+
+[![Android CI](https://img.shields.io/badge/Android-Gradle-3DDC84?logo=android&logoColor=white)]()
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.x-7F52FF?logo=kotlin&logoColor=white)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+**Contenido**
+- [Características](#-características-principales)
+- [Capturas](#-capturas-de-pantalla)
+- [Personalización](#-personalización-en-5-minutos)
+- [Compila y publica](#-compila-y-publica-)
+
 Una plantilla moderna y lista para usar en proyectos de eventos, restaurantes o negocios de servicios.
 ✅ Fácil de personalizar – cambia logo, colores y textos en minutos.
 ✅ Construida con Material 3 + Android Studio.

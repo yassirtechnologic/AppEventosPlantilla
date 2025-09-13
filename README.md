@@ -40,6 +40,26 @@ Testimonios
 
 Carta de Platos
 
+### 📸 Capturas de Pantalla
+
+<p float="left">
+  <img src="screenshots/menu.png" width="260" />
+  <img src="screenshots/inicio.png" width="260" />
+  <img src="screenshots/formulario.png" width="260" />
+</p>
+
+<p float="left">
+  <img src="screenshots/lista_eventos.png" width="260" />
+  <img src="screenshots/galeria.png" width="260" />
+  <img src="screenshots/contacto.png" width="260" />
+</p>
+
+<p float="left">
+  <img src="screenshots/testimonios.png" width="260" />
+  <img src="screenshots/carta.png" width="260" />
+</p>
+
+
 🛠️ Personalización en 5 minutos
 
 1️⃣ Cambia el nombre y textos

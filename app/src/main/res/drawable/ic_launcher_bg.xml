@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center">
+        <inset android:inset="18dp">
+            <bitmap
+                android:src="@drawable/ic_restaurant_24"
+                android:tint="#FFFFFFFF"
+                android:antialias="true"/>
+        </inset>
+    </item>
+</layer-list>

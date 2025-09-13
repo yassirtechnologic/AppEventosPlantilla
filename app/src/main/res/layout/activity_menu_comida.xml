@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <!-- 🔙 Botón Volver -->
+    <Button
+        android:id="@+id/btnVolver"
+        style="@style/BotonMenuLateral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_volver"
+        android:layout_margin="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- 📜 Contenido scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnVolver"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:background="@color/menuPanelOverlay">
+
+            <!-- 📌 Título general -->
+            <TextView
+                android:id="@+id/tvTituloCarta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_comida_titulo"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 📋 Aquí se añadirán dinámicamente las tarjetas de platos -->
+            <LinearLayout
+                android:id="@+id/layoutListaPlatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="?android:attr/dividerVertical"
+                android:showDividers="middle"
+                android:dividerPadding="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+

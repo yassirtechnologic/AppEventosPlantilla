@@ -1,0 +1,165 @@
+<resources>
+    <!-- ========= App ========= -->
+    <string name="app_name">App de Eventos</string>
+    <string name="app_title">App de Eventos</string>
+    <string name="app_tagline">Organiza y presenta tus eventos de forma profesional.</string>
+
+    <!-- ========= Accesibilidad (contentDescription) ========= -->
+    <string name="cd_logo">Logo de la aplicación</string>
+    <string name="cd_titulo">Título de la aplicación</string>
+    <string name="cd_plato">Imagen de plato</string>
+    <string name="cd_alcohol">Imagen de bebidas con alcohol</string>
+    <string name="cd_bebidas">Imagen de bebidas</string>
+    <string name="cd_cerdo">Imagen de platos de cerdo</string>
+    <string name="cd_ensalada_cesar">Imagen de Ensalada César</string>
+    <string name="cd_entrantes">Imagen de entrantes</string>
+    <string name="cd_marisco">Plato de mariscos</string>
+    <string name="cd_pastel">Imagen de pastel</string>
+    <string name="cd_pescado">Imagen de plato de pescado</string>
+    <string name="cd_pollo">Imagen de plato de pollo</string>
+    <string name="cd_ternera">Imagen de plato de ternera</string>
+    <string name="cd_veganos_celiacos">Imagen de opciones veganas y para celíacos</string>
+
+    <!-- ========= Botones (con emoji) ========= -->
+    <string name="btn_inicio">🏠 Inicio</string>
+    <string name="btn_crear">📝 Crear evento</string>
+    <string name="btn_ver">📅 Ver eventos</string>
+    <string name="btn_galeria">🖼 Galería</string>
+    <string name="btn_contacto">📞 Contacto</string>
+    <string name="btn_testimonios">💬 Testimonios</string>
+    <string name="btn_menu_comida">🍽 Carta</string>
+    <string name="btn_volver">🔙 Volver</string>
+
+    <!-- ========= Botones (sin emoji, opcional) ========= -->
+    <string name="btn_inicio_plain">Inicio</string>
+    <string name="btn_crear_plain">Crear evento</string>
+    <string name="btn_ver_plain">Ver eventos</string>
+    <string name="btn_galeria_plain">Galería</string>
+    <string name="btn_contacto_plain">Contacto</string>
+    <string name="btn_testimonios_plain">Testimonios</string>
+    <string name="btn_menu_comida_plain">Carta</string>
+    <string name="btn_volver_plain">Volver</string>
+
+    <!-- ========= Inicio ========= -->
+    <string name="inicio_title">App de Eventos</string>
+    <string name="inicio_slogan">Organiza y presenta tus eventos de forma profesional.</string>
+    <string name="inicio_desc_1">Crea celebraciones memorables con una app fácil de personalizar.</string>
+    <string name="inicio_desc_2">Incluye secciones para gestión, galería, contacto y más.</string>
+    <string name="inicio_desc_3">Funciona para negocios y organizadores de eventos en cualquier lugar.</string>
+
+    <!-- ========= Lista de eventos ========= -->
+    <string name="lista_eventos_empty">No hay eventos todavía. ¡Crea el primero! 🎉</string>
+
+    <!-- ========= Formulario ========= -->
+    <string name="form_nombre_hint">📛 Nombre del evento</string>
+    <string name="form_fecha_hint">📅 Fecha</string>
+    <string name="form_ubicacion_hint">📍 Ubicación</string>
+    <string name="form_descripcion_hint">📝 Descripción</string>
+    <string name="form_btn_guardar">💾 Guardar evento</string>
+    <string name="form_guardado_ok">Evento guardado correctamente.</string>
+    <string name="form_guardado_error">No se pudo guardar el evento.</string>
+    <string name="form_validacion_required">Este campo es obligatorio.</string>
+
+    <!-- ========= Testimonios ========= -->
+    <string name="testimonios_empty">Todavía no hay testimonios. ¡Sé el primero en compartir tu experiencia! 💬</string>
+    <string name="testimonio_nombre_default">Cliente</string>
+    <string name="testimonio_fecha_default">Fecha no disponible</string>
+    <string name="testimonio_texto_default">Sin comentarios.</string>
+
+    <!-- ========= Galería ========= -->
+    <string name="galeria_title">Galería</string>
+    <string name="btn_subir_imagen">Subir imagen</string>
+    <string name="galeria_empty">Aún no hay imágenes</string>
+    <string name="galeria_error_carga">No se pudo cargar la imagen</string>
+    <string name="galeria_permiso_rationale">Necesitamos acceso a tus imágenes para mostrarlas en la galería.</string>
+    <plurals name="galeria_conteo">
+        <item quantity="one">%d imagen</item>
+        <item quantity="other">%d imágenes</item>
+    </plurals>
+
+    <!-- ========= Contacto ========= -->
+    <string name="contacto_title">Contacto</string>
+    <string name="contacto_nombre">Nombre</string>
+    <string name="contacto_hint_nombre">Tu nombre completo</string>
+    <string name="contacto_email">Email</string>
+    <string name="contacto_hint_email">tu@correo.com</string>
+    <string name="contacto_telefono">Teléfono</string>
+    <string name="contacto_hint_telefono">Ej. +34 600 000 000</string>
+    <string name="contacto_mensaje">Mensaje</string>
+    <string name="contacto_hint_mensaje">Cuéntanos tu idea…</string>
+    <string name="contacto_btn_email">Enviar por Email</string>
+    <string name="contacto_btn_whatsapp">Enviar por WhatsApp</string>
+
+    <!-- Plantillas de mensaje -->
+    <string name="contacto_email_subject">Consulta desde la app</string>
+    <string name="contacto_email_body">Hola, me gustaría información sobre su servicio de eventos.\n\nNombre: %1$s\nTeléfono: %2$s\nMensaje: %3$s</string>
+    <string name="contacto_whatsapp_text">Hola, soy %1$s. Me interesa su servicio de eventos. %2$s</string>
+    <string name="contacto_error_app_email">No se encontró una app de correo.</string>
+    <string name="contacto_error_app_whatsapp">No se encontró WhatsApp en este dispositivo.</string>
+
+    <!-- ========= Carta de platos (categorías) ========= -->
+    <string name="menu_comida_title">🍽 Carta de Platos</string>
+    <string name="plato_nombre_default">Nombre del plato</string>
+    <string name="plato_desc_default">Descripción breve del plato</string>
+
+    <string name="alcohol_title">Alcohol</string>
+    <string name="alcohol_desc">Opciones con alcohol: vinos, cervezas y cócteles. Consumo responsable.</string>
+
+    <string name="bebidas_title">Bebidas</string>
+    <string name="bebidas_desc">Selección de bebidas para todos los gustos.</string>
+
+    <string name="cerdo_title">Cerdo</string>
+    <string name="cerdo_desc">Platos de cerdo: al horno, asado, con salsas y más.</string>
+
+    <string name="ensaladas_title">Ensaladas</string>
+    <string name="ensaladas_desc">Variedad de ensaladas frescas personalizables.</string>
+    <string name="ensalada_cesar">🥗 Ensalada César</string>
+
+    <string name="entrantes_title">Entrantes</string>
+    <string name="entrantes_desc">Deliciosos entrantes: croquetas, tostas, calamares y más.</string>
+
+    <string name="marisco_title">Mariscos</string>
+    <string name="marisco_desc">Selección de mariscos frescos según temporada.</string>
+
+    <string name="pasteles_title">Pasteles</string>
+    <string name="pasteles_desc">Pasteles caseros con ingredientes frescos.</string>
+
+    <string name="pescado_title">Pescado</string>
+    <string name="pescado_desc">Pescado a la plancha, empanado o con salsa especial.</string>
+
+    <string name="pollo_title">Pollo</string>
+    <string name="pollo_desc">A la parrilla, empanado o con salsa. Guarnición a elección.</string>
+
+    <string name="ternera_title">Ternera</string>
+    <string name="ternera_desc">Cortes de ternera a la parrilla o en salsa, con guarniciones.</string>
+
+    <string name="veganos_celiacos_title">Opciones Veganas y para Celíacos</string>
+    <string name="veganos_celiacos_desc">Opciones sin gluten y 100% vegetales, con gran sabor.</string>
+
+    <!-- Arrays para menú dinámico (opcional) -->
+    <string-array name="menu_categorias_titles">
+        <item>@string/alcohol_title</item>
+        <item>@string/bebidas_title</item>
+        <item>@string/cerdo_title</item>
+        <item>@string/ensaladas_title</item>
+        <item>@string/entrantes_title</item>
+        <item>@string/marisco_title</item>
+        <item>@string/pasteles_title</item>
+        <item>@string/pescado_title</item>
+        <item>@string/pollo_title</item>
+        <item>@string/ternera_title</item>
+        <item>@string/veganos_celiacos_title</item>
+    </string-array>
+
+    <!-- ========= Mensajes genéricos / toasts / errores ========= -->
+    <string name="msg_cargando">Cargando…</string>
+    <string name="msg_intenta_nuevamente">Ocurrió un error. Inténtalo nuevamente.</string>
+    <string name="msg_permiso_denegado">Permiso denegado.</string>
+
+    <!-- ========= Permisos (rationales) ========= -->
+    <string name="permiso_storage_rationale">Para seleccionar imágenes, la app necesita acceso al almacenamiento.</string>
+    <string name="permiso_camera_rationale">Para tomar fotos, la app necesita acceso a la cámara.</string>
+</resources>
+
+
+

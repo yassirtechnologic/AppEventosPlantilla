@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- 🎨 Tema base (hereda de Material Components, puedes cambiarlo a AppCompat si quieres) -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/gray_dark</item>
+        <item name="android:buttonStyle">@style/Widget.App.Button</item>
+    </style>
+
+    <!-- 🔘 Estilo base de botones -->
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/buttonPrimaryBackground</item>
+        <item name="android:textColor">@color/buttonPrimaryText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">12dp</item>
+        <item name="cornerRadius">8dp</item> <!-- esquinas redondeadas -->
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- 🔲 Botón menú lateral (hereda del estilo base de botón) -->
+    <style name="BotonMenuLateral" parent="Widget.App.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_menu</item> <!-- tu drawable con ripple -->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <!-- 📝 Estilo para títulos -->
+    <style name="TituloSeccion">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- 📄 Estilo para texto secundario / descripciones -->
+    <style name="TextoSecundario">
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+</resources>
+
+
+
+

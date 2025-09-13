@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <!-- 🧢 Logo superior centrado -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:background="@drawable/borde_imagen"
+        android:padding="6dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/cd_logo" />
+
+    <!-- 📝 Título de la app -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginBottom="8dp"
+        android:text="@string/app_title"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="@color/menuPanelOverlay"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:contentDescription="@string/cd_titulo" />
+
+    <!-- 📜 Scroll con botones -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtTitulo"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp"
+            android:background="@color/menuPanelOverlay"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:dividerPadding="8dp">
+
+            <Button
+                android:id="@+id/btnInicio"
+                style="@style/BotonMenuLateral"
+                android:text="@string/btn_inicio" />
+
+            <Button
+                android:id="@+id/btnCrear"
+                style="@style/BotonMenuLateral"
+                android:text="@string/btn_crear" />
+
+            <Button
+                android:id="@+id/btnVer"
+                style="@style/BotonMenuLateral"
+                android:text="@string/btn_ver" />
+
+            <Button
+                android:id="@+id/btnGaleria"
+                style="@style/BotonMenuLateral"
+                android:text="@string/btn_galeria" />
+
+            <Button
+                android:id="@+id/btnContacto"
+                style="@style/BotonMenuLateral"
+                android:text="@string/btn_contacto" />
+
+            <Button
+                android:id="@+id/btnTestimonios"
+                style="@style/BotonMenuLateral"
+                android:text="@string/btn_testimonios" />
+
+            <Button
+                android:id="@+id/btnMenuComida"
+                style="@style/BotonMenuLateral"
+                android:text="@string/btn_menu_comida" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+
+
+
+
+

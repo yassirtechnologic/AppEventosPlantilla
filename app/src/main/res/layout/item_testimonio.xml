@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_bg"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <!-- 👤 Nombre del cliente -->
+    <TextView
+        android:id="@+id/tvNombreCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/testimonio_nombre_default"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <!-- 📅 Fecha -->
+    <TextView
+        android:id="@+id/tvFechaTestimonio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/testimonio_fecha_default"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <!-- 💬 Texto del testimonio -->
+    <TextView
+        android:id="@+id/tvTextoTestimonio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/testimonio_texto_default"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:lineSpacingExtra="2dp"
+        android:ellipsize="end"
+        android:maxLines="4" />
+</LinearLayout>
+

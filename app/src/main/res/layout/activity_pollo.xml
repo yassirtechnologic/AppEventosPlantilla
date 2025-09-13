@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollPollo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/menuPanelOverlay">
+
+        <!-- 📌 Título genérico -->
+        <TextView
+            android:id="@+id/tvTituloCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pollo_titulo"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 🍗 Imagen genérica -->
+        <ImageView
+            android:id="@+id/ivCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pollo"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/cd_pollo" />
+
+        <!-- 📝 Descripción genérica -->
+        <TextView
+            android:id="@+id/tvDescripcionCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pollo_desc"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:gravity="center"
+            android:padding="8dp" />
+    </LinearLayout>
+</ScrollView>
+
+
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 🎨 Paleta base (Material Design + personalizados) -->
+    <color name="colorPrimary">#FF6200EE</color>   <!-- púrpura -->
+    <color name="colorPrimaryDark">#FF3700B3</color>
+    <color name="colorAccent">#FF03DAC5</color>
+    <color name="colorSecondary">#FF6A00</color>   <!-- naranja vivo -->
+    <color name="colorSecondaryDark">#E65F00</color>
+
+    <!-- 🌑 Neutros -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_light">#FFEEEEEE</color>
+    <color name="gray_medium">#FF888888</color>
+    <color name="gray_dark">#FF444444</color>
+
+    <!-- 📌 Botones -->
+    <color name="buttonPrimaryBackground">@color/colorSecondary</color>
+    <color name="buttonPrimaryBackgroundPressed">@color/colorSecondaryDark</color>
+    <color name="buttonPrimaryText">@color/white</color>
+
+    <!-- 🖼 Overlays y fondos -->
+    <color name="menuPanelOverlay">#80000000</color>  <!-- semi-transparente -->
+    <color name="overlay_light">#80FFFFFF</color>
+    <color name="overlay_dark">#80000000</color>
+
+    <!-- ✨ Extras (por si usas más tarde) -->
+    <color name="success">#4CAF50</color>   <!-- verde éxito -->
+    <color name="warning">#FFC107</color>   <!-- amarillo advertencia -->
+    <color name="error">#F44336</color>     <!-- rojo error -->
+    <color name="info">#2196F3</color>      <!-- azul info -->
+</resources>

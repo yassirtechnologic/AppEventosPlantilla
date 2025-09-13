@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollContacto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:background="@color/menuPanelOverlay">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTituloContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacto_titulo"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Nombre -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacto_nombre"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contacto_hint_nombre"
+            android:inputType="textPersonName"
+            android:autofillHints="name"
+            android:imeOptions="actionNext"
+            android:padding="12dp"
+            android:background="@drawable/field_bg"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="4dp" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacto_email"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contacto_hint_email"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            android:imeOptions="actionNext"
+            android:padding="12dp"
+            android:background="@drawable/field_bg"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="4dp" />
+
+        <!-- Teléfono -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacto_telefono"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contacto_hint_telefono"
+            android:inputType="phone"
+            android:autofillHints="phone"
+            android:imeOptions="actionNext"
+            android:padding="12dp"
+            android:background="@drawable/field_bg"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="4dp" />
+
+        <!-- Mensaje -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacto_mensaje"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="@string/contacto_hint_mensaje"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:imeOptions="actionDone"
+            android:maxLines="6"
+            android:padding="12dp"
+            android:background="@drawable/field_bg"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="4dp" />
+
+        <!-- Botones -->
+        <Button
+            android:id="@+id/btnEnviarEmail"
+            style="@style/BotonMenuLateral"
+            android:text="@string/contacto_btn_email"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnEnviarWhatsApp"
+            style="@style/BotonMenuLateral"
+            android:text="@string/contacto_btn_whatsapp"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <!-- 🔙 Botón Volver -->
+    <Button
+        android:id="@+id/btnVolver"
+        style="@style/BotonMenuLateral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_volver"
+        android:layout_margin="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- 📌 Logo esquina superior derecha -->
+    <ImageView
+        android:id="@+id/logoInicio"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/logo"
+        android:background="@drawable/borde_imagen"
+        android:padding="6dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/cd_logo" />
+
+    <!-- 📜 Contenido con scroll -->
+    <ScrollView
+        android:id="@+id/scrollInicio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnVolver"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp"
+            android:background="@color/menuPanelOverlay">
+
+            <!-- 🏷️ Título -->
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inicio_titulo"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginBottom="12dp" />
+
+            <!-- ✨ Slogan -->
+            <TextView
+                android:id="@+id/tvSlogan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inicio_slogan"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 📖 Descripción 1 -->
+            <TextView
+                android:id="@+id/tvDescripcion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inicio_desc_1"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 📖 Descripción 2 -->
+            <TextView
+                android:id="@+id/tvDescripcion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inicio_desc_2"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 📖 Descripción 3 -->
+            <TextView
+                android:id="@+id/tvDescripcion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inicio_desc_3"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+

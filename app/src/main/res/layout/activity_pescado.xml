@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollPescado"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/menuPanelOverlay">
+
+        <!-- 📌 Título -->
+        <TextView
+            android:id="@+id/tvTituloCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pescado_titulo"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 🐟 Imagen -->
+        <ImageView
+            android:id="@+id/ivCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/pescado"
+            android:contentDescription="@string/cd_pescado" />
+
+        <!-- 📝 Descripción -->
+        <TextView
+            android:id="@+id/tvDescripcionCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pescado_desc"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:gravity="center"
+            android:padding="8dp" />
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+

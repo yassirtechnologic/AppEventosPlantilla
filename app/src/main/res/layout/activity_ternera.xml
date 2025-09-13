@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/menuPanelOverlay"
+        android:padding="16dp">
+
+        <!-- 📌 Título -->
+        <TextView
+            android:id="@+id/tvTituloTernera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ternera_titulo"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/cd_titulo" />
+
+        <!-- 🥩 Imagen -->
+        <ImageView
+            android:id="@+id/imgTernera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ternera"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/cd_ternera" />
+
+        <!-- 📝 Descripción -->
+        <TextView
+            android:id="@+id/tvDescTernera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ternera_desc"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+

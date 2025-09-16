@@ -4,66 +4,43 @@ import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.File
-import java.io.IOException
 
-/**
- * Maneja el guardado y recuperación de eventos en almacenamiento interno usando JSON.
- */
 class EventoStorage(private val context: Context) {
 
-    private val fileName = "eventos.json"
     private val gson = Gson()
+    private val file = File(context.filesDir, "eventos.json")
 
-    /**
-     * Guarda un nuevo evento en el archivo.
-     */
-    fun guardarEvento(evento: Evento) {
-        val eventos = obtenerEventos().toMutableList()
-        eventos.add(evento)
-        guardarEventos(eventos)
+    /** Lee todos los eventos del JSON (si no existe, devuelve lista vacía). */
+    fun getAll(): List<Evento> {
+        if (!file.exists()) return emptyList()
+        val json = runCatching { file.readText() }.getOrElse { return emptyList() }
+        val type = object : TypeToken<List<Evento>>() {}.type
+        return runCatching { gson.fromJson<List<Evento>>(json, type) ?: emptyList() }
+            .getOrElse { emptyList() }
     }
 
-    /**
-     * Devuelve todos los eventos guardados.
-     */
-    fun obtenerEventos(): List<Evento> {
-        return try {
-            val file = File(context.filesDir, fileName)
-            if (!file.exists()) return emptyList()
-
-            val json = file.readText()
-            if (json.isBlank()) return emptyList()
-
-            val type = object : TypeToken<List<Evento>>() {}.type
-            gson.fromJson(json, type) ?: emptyList()
-        } catch (e: Exception) {
-            emptyList()
-        }
+    /** Guarda la lista completa en el JSON. */
+    fun saveAll(items: List<Evento>) {
+        val json = gson.toJson(items)
+        file.writeText(json)
     }
 
-    /**
-     * Reemplaza la lista de eventos completa en el archivo.
-     */
-    fun guardarEventos(eventos: List<Evento>) {
-        try {
-            val json = gson.toJson(eventos)
-            context.openFileOutput(fileName, Context.MODE_PRIVATE).use {
-                it.write(json.toByteArray())
-            }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
+    /** Agrega un evento al inicio de la lista y persiste. */
+    fun add(ev: Evento) {
+        val list = getAll().toMutableList()
+        list.add(0, ev)
+        saveAll(list)
     }
 
-    /**
-     * Elimina todos los eventos.
-     */
-    fun limpiarEventos() {
-        try {
-            context.deleteFile(fileName)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+    /** Limpia el archivo (opcional). */
+    fun clear() {
+        if (file.exists()) file.delete()
     }
+
+    // 👇 Alias por compatibilidad con llamadas anteriores
+    fun listar(): List<Evento> = getAll()
+    fun obtenerTodos(): List<Evento> = getAll()
+
+    // Alias para compatibilidad con código antiguo
+    fun guardarEvento(ev: Evento) = add(ev)
 }
-

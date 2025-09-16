@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
+import android.graphics.drawable.ColorDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import java.io.File
@@ -13,44 +15,64 @@ class ImagenCompletaActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Infla dentro del layout base
         setContentInBase(R.layout.activity_imagen_completa)
         mostrarBotonVolver(true)
 
         val img = findViewById<ImageView>(R.id.imgCompleta)
 
-        // Soporta 3 orígenes posibles: drawable, archivo local o URL
         val resId = intent.getIntExtra(EXTRA_RES_ID, 0)
-        val path  = intent.getStringExtra(EXTRA_PATH)   // opcional
-        val url   = intent.getStringExtra(EXTRA_URL)    // opcional
+        val path  = intent.getStringExtra(EXTRA_PATH)
+        val url   = intent.getStringExtra(EXTRA_URL)
 
-        val glide = Glide.with(this)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .placeholder(android.R.color.darker_gray)
-            .error(android.R.color.darker_gray)
+        if (!loadInto(img, resId, path, url)) {
+            finish()
+        }
+    }
 
-        when {
+    private fun loadInto(img: ImageView, resId: Int, path: String?, url: String?): Boolean {
+        val placeholder = ColorDrawable(
+            ContextCompat.getColor(this, android.R.color.darker_gray)
+        )
+
+        return when {
             resId != 0 -> {
-                glide.load(resId).fitCenter().into(img)
+                Glide.with(this)
+                    .load(resId)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .placeholder(placeholder)
+                    .error(placeholder)
+                    .fitCenter()
+                    .into(img)
+                true
             }
-            !path.isNullOrEmpty() -> {
-                glide.load(File(path)).fitCenter().into(img)
+            !path.isNullOrBlank() -> {
+                Glide.with(this)
+                    .load(File(path))
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .placeholder(placeholder)
+                    .error(placeholder)
+                    .fitCenter()
+                    .into(img)
+                true
             }
-            !url.isNullOrEmpty() -> {
-                glide.load(url).fitCenter().into(img)
+            !url.isNullOrBlank() -> {
+                Glide.with(this)
+                    .load(url)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .placeholder(placeholder)
+                    .error(placeholder)
+                    .fitCenter()
+                    .into(img)
+                true
             }
-            else -> {
-                // Sin datos -> cerrar silenciosamente
-                finish()
-                return
-            }
+            else -> false
         }
     }
 
     companion object {
-        const val EXTRA_RES_ID = "EXTRA_RES_ID"
-        const val EXTRA_PATH   = "EXTRA_PATH"
-        const val EXTRA_URL    = "EXTRA_URL"
+        private const val EXTRA_RES_ID = "EXTRA_RES_ID"
+        private const val EXTRA_PATH   = "EXTRA_PATH"
+        private const val EXTRA_URL    = "EXTRA_URL"
 
         fun fromRes(context: Context, resId: Int): Intent =
             Intent(context, ImagenCompletaActivity::class.java).apply {
@@ -68,6 +90,8 @@ class ImagenCompletaActivity : BaseActivity() {
             }
     }
 }
+
+
 
 
 

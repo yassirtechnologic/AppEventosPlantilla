@@ -1,5 +1,6 @@
 package com.appeventos.plantilla
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -11,56 +12,59 @@ class ListaEventosActivity : BaseActivity() {
 
     private lateinit var rvEventos: RecyclerView
     private lateinit var tvEmpty: TextView
+    private lateinit var btnCrearEvento: Button
     private lateinit var storage: EventoStorage
+
     private var adapter: EventosAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Infla dentro del layout base
         setContentInBase(R.layout.activity_lista_eventos)
         mostrarBotonVolver(true)
 
-        // Views
         rvEventos = findViewById(R.id.rvEventos)
         tvEmpty = findViewById(R.id.tvEmpty)
-        val btnCrear = findViewById<Button>(R.id.btnCrearEvento)
+        btnCrearEvento = findViewById(R.id.btnCrearEvento)
 
         storage = EventoStorage(this)
+
         rvEventos.layoutManager = LinearLayoutManager(this)
-
-        // Crear evento
-        btnCrear.setOnClickListener {
-            startActivity(android.content.Intent(this, FormularioActivity::class.java))
+        adapter = EventosAdapter { ev: Evento ->
+            // TODO: abrir detalle si quieres
+            // startActivity(DetalleEventoActivity.from(this, ev))
         }
+        rvEventos.adapter = adapter
 
-        cargarEventos()
+        btnCrearEvento.setOnClickListener {
+            startActivity(Intent(this, FormularioActivity::class.java))
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        cargarEventos() // refresca lista al volver
+        cargarEventos()
     }
 
     private fun cargarEventos() {
-        val eventos = storage.obtenerEventos()
-
-        if (eventos.isEmpty()) {
-            tvEmpty.visibility = View.VISIBLE
-            rvEventos.visibility = View.GONE
-        } else {
-            tvEmpty.visibility = View.GONE
-            rvEventos.visibility = View.VISIBLE
-
-            if (adapter == null) {
-                adapter = EventosAdapter(eventos.toMutableList())
-                rvEventos.adapter = adapter
-            } else {
-                adapter!!.updateItems(eventos)
+        // 🔁 Cambia aquí según tu API real:
+        val eventos: List<Evento> = try {
+            storage.getAll()                     // si existe
+        } catch (_: Throwable) {
+            try { storage.listar() }             // si tu método se llama listar()
+            catch (_: Throwable) {
+                try { storage.obtenerTodos() }   // otro nombre típico
+                catch (_: Throwable) { emptyList() }
             }
         }
+
+        adapter?.updateItems(eventos)
+
+        val empty = eventos.isEmpty()
+        tvEmpty.visibility = if (empty) View.VISIBLE else View.GONE
+        rvEventos.visibility = if (empty) View.GONE else View.VISIBLE
     }
 }
+
 
 
 

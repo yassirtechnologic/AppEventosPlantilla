@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ========= App ========= -->
     <string name="app_name">App de Eventos</string>
@@ -46,9 +47,13 @@
     <string name="inicio_desc_1">Crea celebraciones memorables con una app fácil de personalizar.</string>
     <string name="inicio_desc_2">Incluye secciones para gestión, galería, contacto y más.</string>
     <string name="inicio_desc_3">Funciona para negocios y organizadores de eventos en cualquier lugar.</string>
+    <!-- Alias para layouts antiguos -->
+    <string name="inicio_titulo">@string/inicio_title</string>
 
     <!-- ========= Lista de eventos ========= -->
     <string name="lista_eventos_empty">No hay eventos todavía. ¡Crea el primero! 🎉</string>
+    <!-- Alias para layouts antiguos -->
+    <string name="lista_eventos_vacia">@string/lista_eventos_empty</string>
 
     <!-- ========= Formulario ========= -->
     <string name="form_nombre_hint">📛 Nombre del evento</string>
@@ -65,6 +70,8 @@
     <string name="testimonio_nombre_default">Cliente</string>
     <string name="testimonio_fecha_default">Fecha no disponible</string>
     <string name="testimonio_texto_default">Sin comentarios.</string>
+    <!-- Alias para layouts antiguos -->
+    <string name="testimonios_vacio">@string/testimonios_empty</string>
 
     <!-- ========= Galería ========= -->
     <string name="galeria_title">Galería</string>
@@ -76,6 +83,9 @@
         <item quantity="one">%d imagen</item>
         <item quantity="other">%d imágenes</item>
     </plurals>
+    <!-- Alias para layouts antiguos -->
+    <string name="galeria_titulo">@string/galeria_title</string>
+    <string name="galeria_vacia">@string/galeria_empty</string>
 
     <!-- ========= Contacto ========= -->
     <string name="contacto_title">Contacto</string>
@@ -89,18 +99,21 @@
     <string name="contacto_hint_mensaje">Cuéntanos tu idea…</string>
     <string name="contacto_btn_email">Enviar por Email</string>
     <string name="contacto_btn_whatsapp">Enviar por WhatsApp</string>
-
     <!-- Plantillas de mensaje -->
     <string name="contacto_email_subject">Consulta desde la app</string>
     <string name="contacto_email_body">Hola, me gustaría información sobre su servicio de eventos.\n\nNombre: %1$s\nTeléfono: %2$s\nMensaje: %3$s</string>
     <string name="contacto_whatsapp_text">Hola, soy %1$s. Me interesa su servicio de eventos. %2$s</string>
     <string name="contacto_error_app_email">No se encontró una app de correo.</string>
     <string name="contacto_error_app_whatsapp">No se encontró WhatsApp en este dispositivo.</string>
+    <!-- Alias para layouts antiguos -->
+    <string name="contacto_titulo">@string/contacto_title</string>
 
     <!-- ========= Carta de platos (categorías) ========= -->
     <string name="menu_comida_title">🍽 Carta de Platos</string>
     <string name="plato_nombre_default">Nombre del plato</string>
     <string name="plato_desc_default">Descripción breve del plato</string>
+    <!-- Alias para layouts antiguos -->
+    <string name="menu_comida_titulo">@string/menu_comida_title</string>
 
     <string name="alcohol_title">Alcohol</string>
     <string name="alcohol_desc">Opciones con alcohol: vinos, cervezas y cócteles. Consumo responsable.</string>
@@ -136,7 +149,20 @@
     <string name="veganos_celiacos_title">Opciones Veganas y para Celíacos</string>
     <string name="veganos_celiacos_desc">Opciones sin gluten y 100% vegetales, con gran sabor.</string>
 
-    <!-- Arrays para menú dinámico (opcional) -->
+    <!-- Aliases *_titulo para layouts antiguos -->
+    <string name="alcohol_titulo">@string/alcohol_title</string>
+    <string name="bebidas_titulo">@string/bebidas_title</string>
+    <string name="cerdo_titulo">@string/cerdo_title</string>
+    <string name="ensaladas_titulo">@string/ensaladas_title</string>
+    <string name="entrantes_titulo">@string/entrantes_title</string>
+    <string name="marisco_titulo">@string/marisco_title</string>
+    <string name="pasteles_titulo">@string/pasteles_title</string>
+    <string name="pescado_titulo">@string/pescado_title</string>
+    <string name="pollo_titulo">@string/pollo_title</string>
+    <string name="ternera_titulo">@string/ternera_title</string>
+    <string name="veganos_celiacos_titulo">@string/veganos_celiacos_title</string>
+
+    <!-- ========= Arrays para menú dinámico ========= -->
     <string-array name="menu_categorias_titles">
         <item>@string/alcohol_title</item>
         <item>@string/bebidas_title</item>
@@ -160,6 +186,7 @@
     <string name="permiso_storage_rationale">Para seleccionar imágenes, la app necesita acceso al almacenamiento.</string>
     <string name="permiso_camera_rationale">Para tomar fotos, la app necesita acceso a la cámara.</string>
 </resources>
+
 
 
 

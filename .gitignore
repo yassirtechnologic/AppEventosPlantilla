@@ -17,3 +17,8 @@ app/release/
 app/build/
 *.apk
 *.aab
+
+# IDE
+.idea/
+*.iml
+

@@ -58,9 +58,8 @@ class GaleriaActivity : BaseActivity() {
             imagenes,
             esAdmin,
             { file ->
-                val i = Intent(this, ImagenCompletaActivity::class.java)
-                i.putExtra("EXTRA_PATH", file.absolutePath)
-                startActivity(i)
+                // Abre imagen completa usando el helper de la Activity
+                startActivity(ImagenCompletaActivity.fromFile(this, file))
             },
             { file -> confirmarEliminar(file) }
         )
@@ -88,9 +87,16 @@ class GaleriaActivity : BaseActivity() {
         }
 
         try {
-            contentResolver.openInputStream(uri)?.use { input ->
+            val ok = contentResolver.openInputStream(uri)?.use { input ->
                 FileOutputStream(destino).use { output -> input.copyTo(output) }
+                true
+            } ?: false
+
+            if (!ok) {
+                toast("No se pudo abrir la imagen")
+                return
             }
+
             imagenes.add(0, destino)
             galeriaAdapter.notifyItemInserted(0)
             recyclerView.scrollToPosition(0)
@@ -101,7 +107,9 @@ class GaleriaActivity : BaseActivity() {
     }
 
     private fun actualizarEstadoVacio() {
-        tvVacio?.visibility = if (imagenes.isEmpty()) View.VISIBLE else View.GONE
+        val vacia = imagenes.isEmpty()
+        tvVacio?.visibility = if (vacia) View.VISIBLE else View.GONE
+        recyclerView.visibility = if (vacia) View.GONE else View.VISIBLE
     }
 
     private fun obtenerNombreArchivo(uri: Uri): String {
@@ -136,6 +144,7 @@ class GaleriaActivity : BaseActivity() {
     private fun toast(msg: String) =
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
 }
+
 
 
 

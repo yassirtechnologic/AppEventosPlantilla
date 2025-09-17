@@ -18,9 +18,8 @@
 
 ---
 
-## 📦 Descarga
-
-- **APK demo v1.0.0**: **[Descargar](https://github.com/yassirtechnologic/AppEventosPlantilla/releases/download/v1.0.0/AppEventosPlantilla-v1.0.0-demo.apk)**  
+## Descarga
+- **APK demo v1.0.1**: [Descargar](https://github.com/yassirtechnologic/AppEventosPlantilla/releases/download/v1.0.1/AppEventosPlantilla-v1.0.1-demo.apk)  
 - Todos los releases: **https://github.com/yassirtechnologic/AppEventosPlantilla/releases**
 
 ---
